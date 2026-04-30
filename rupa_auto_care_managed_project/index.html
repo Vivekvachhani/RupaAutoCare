@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rupa Auto Care | Mobile Mechanic Bolton & Manchester</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="loader">
+    <div class="loader-card">
+      <img src="assets/logo.png" alt="Rupa Auto Care Logo" onerror="this.style.display='none';document.querySelector('.loader-logo-text').style.display='block'" />
+      <div class="loader-logo-text">RUPA AUTO CARE</div>
+      <div class="loader-line"><span></span></div>
+    </div>
+  </div>
+
+  <div class="popup" id="popup" onclick="if(event.target.id==='popup') closePopup()">
+    <div class="popup-box">
+      <span class="close-btn" onclick="closePopup()">✖</span>
+      <div class="popup-header">
+        <div class="popup-icon">🔧</div>
+        <div>
+          <h3>Book Mobile Mechanic</h3>
+          <p>Send your details and we’ll reply on WhatsApp.</p>
+        </div>
+      </div>
+
+      <input id="pname" placeholder="Your Name" />
+      <input id="pphone" placeholder="Phone Number" />
+      <select id="pservice">
+        <option value="General Service">General Service</option>
+        <option>Oil Change Service</option>
+        <option>Brake Service</option>
+        <option>Battery Service</option>
+        <option>Engine Diagnostic</option>
+        <option>Tyre Services</option>
+        <option>Suspension Service</option>
+        <option>Clutch Service</option>
+        <option>Transmission Service</option>
+        <option>Car Wash & Cleaning</option>
+        <option>Fuel Injector Cleaning</option>
+        <option>Radiator Service</option>
+        <option>Starter & Alternator Service</option>
+        <option>Electrical Services</option>
+        <option>Pre Purchase Inspection</option>
+        <option>Bulbs</option>
+        <option>Fan Belt</option>
+        <option>Wipers</option>
+        <option>Repairs</option>
+        <option>Buy & Sell Cars</option>
+        <option>Other</option>
+      </select>
+
+      <div class="quick-select">
+        <button onclick="setService('General Service')">General</button>
+        <button onclick="setService('Oil Change Service')">Oil</button>
+        <button onclick="setService('Brake Service')">Brakes</button>
+        <button onclick="setService('Battery Service')">Battery</button>
+        <button onclick="setService('Engine Diagnostic')">Diagnostic</button>
+        <button onclick="setService('Tyre Services')">Tyres</button>
+        <button onclick="setService('Clutch Service')">Clutch</button>
+        <button onclick="setService('Electrical Services')">Electrical</button>
+      </div>
+
+      <textarea id="pmsg" placeholder="Describe your issue / location"></textarea>
+      <div class="popup-actions">
+        <button class="btn btn-dark" onclick="closePopup()">Cancel</button>
+        <button class="btn btn-yellow" onclick="sendInquiry()">Send WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Rupa Auto Care Logo" />
+      
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-call" href="tel:+447442127757">Call Now</a>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge">🔧 Mobile Mechanic Van • Bolton & Manchester</div>
+        <h1>Garage Service <span>At Your Doorstep</span></h1>
+        <p>Rupa Auto Care is a mobile mechanic service. We come with tools and repair support for batteries, clutch, exhaust, brakes, bulbs, engine oil, fan belt and wipers.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-yellow" href="#" onclick="openPopup();return false;">Book Mobile Mechanic</a>
+          <a class="btn btn-dark" href="tel:+447442127757">Call 07442 127757</a>
+        </div>
+
+        <div class="hero-points">
+          <div class="point"><strong>Mobile Van</strong><small>We come to you</small></div>
+          <div class="point"><strong>Fast</strong><small>Same-day support</small></div>
+          <div class="point"><strong>Local</strong><small>Bolton & Manchester</small></div>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="hero-orbit"></div>
+        <div class="hero-dashboard">
+          <div class="tools-scene">
+            <div class="gear-big"></div>
+            <div class="tool-chip one"><span>🔋</span><b>Battery</b></div>
+            <div class="tool-chip two"><span>🛞</span><b>Brakes</b></div>
+            <div class="tool-chip three"><span>🛢️</span><b>Oil Service</b></div>
+            <div class="tool-chip four"><span>🔧</span><b>Repairs</b></div>
+          </div>
+
+          <div class="status-panel">
+            <div><b>Mechanic Available</b><br /><small>Mobile callout ready</small></div>
+            <span class="live-dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="section-title">
+        <small>Mobile Mechanic Services</small>
+        <h2>What We Repair</h2>
+        <p>Tap any service to message us directly on WhatsApp.</p>
+      </div>
+
+      <div class="service-grid">
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Oil%20change%20service"><div class="service-icon">🛢️</div><h3>Oil Change Service</h3><p>Premium engine oil change for smooth performance.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Brake%20service"><div class="service-icon">🛑</div><h3>Brake Service</h3><p>Brake inspection, pads & disc replacement.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Battery%20service"><div class="service-icon">🔋</div><h3>Battery Service</h3><p>Battery check, jump start & replacement.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Engine%20diagnostic"><div class="service-icon">⚡</div><h3>Engine Diagnostic</h3><p>Advanced scanning & fault detection.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Tyre%20service"><div class="service-icon">🛞</div><h3>Tyre Services</h3><p>Tyre fitting, balancing & puncture repair.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Suspension%20service"><div class="service-icon">🚗</div><h3>Suspension Service</h3><p>Shock absorber & suspension repair.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Clutch%20repair"><div class="service-icon">⚙️</div><h3>Clutch Service</h3><p>Clutch repair & replacement service.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Transmission%20service"><div class="service-icon">🔧</div><h3>Transmission</h3><p>Gearbox inspection & repair.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Car%20wash"><div class="service-icon">🚿</div><h3>Car Wash & Cleaning</h3><p>Interior & exterior cleaning service.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Fuel%20injector%20cleaning"><div class="service-icon">⛽</div><h3>Fuel Injector Cleaning</h3><p>Improve mileage & engine performance.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Radiator%20service"><div class="service-icon">🌡️</div><h3>Radiator Service</h3><p>Cooling system check & repair.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Starter%20alternator"><div class="service-icon">🔌</div><h3>Starter & Alternator</h3><p>Electrical starting system repair.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Electrical%20service"><div class="service-icon">💡</div><h3>Electrical Services</h3><p>All vehicle electrical repair work.</p></a>
+        <a class="service-card" href="https://api.whatsapp.com/send?phone=447442127757&text=Pre%20purchase%20inspection"><div class="service-icon">📋</div><h3>Pre Purchase Inspection</h3><p>Complete vehicle check before buying.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why" id="why">
+    <div class="wrap">
+      <div class="section-title"><small>Why Choose Us</small><h2>Built For Mobile Repairs</h2></div>
+
+      <div class="why-grid">
+        <div class="why-card"><h3>Mobile Van Service</h3><p>We bring tools and repair support to your home, office or roadside.</p></div>
+        <div class="why-card"><h3>Clear Pricing</h3><p>We explain the work before starting.</p></div>
+        <div class="why-card"><h3>Fast Support</h3><p>Same-day availability where possible.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews">
+    <div class="wrap">
+      <div class="section-title"><small>Customer Reviews</small><h2>What Clients Say</h2></div>
+
+      <div class="review-slider">
+        <div class="review-track">
+          <div class="review-card"><div class="review-avatar">J</div><div class="stars">★★★★★</div><p>Very fast service! Came to my home and fixed my car battery in 30 minutes.</p><b>- John (Bolton)</b></div>
+          <div class="review-card"><div class="review-avatar">A</div><div class="stars">★★★★★</div><p>Professional mechanic, explained everything clearly. Highly recommended.</p><b>- Ahmed (Manchester)</b></div>
+          <div class="review-card"><div class="review-avatar">S</div><div class="stars">★★★★★</div><p>Saved me on roadside breakdown. Quick response and fair price.</p><b>- Sarah (Bolton)</b></div>
+          <div class="review-card"><div class="review-avatar">D</div><div class="stars">★★★★☆</div><p>Good service and on time. Will use again for my car repairs.</p><b>- David (Manchester)</b></div>
+          <div class="review-card"><div class="review-avatar">J</div><div class="stars">★★★★★</div><p>Very fast service! Came to my home and fixed my car battery in 30 minutes.</p><b>- John (Bolton)</b></div>
+          <div class="review-card"><div class="review-avatar">A</div><div class="stars">★★★★★</div><p>Professional mechanic, explained everything clearly. Highly recommended.</p><b>- Ahmed (Manchester)</b></div>
+          <div class="review-card"><div class="review-avatar">S</div><div class="stars">★★★★★</div><p>Saved me on roadside breakdown. Quick response and fair price.</p><b>- Sarah (Bolton)</b></div>
+          <div class="review-card"><div class="review-avatar">D</div><div class="stars">★★★★☆</div><p>Good service and on time. Will use again for my car repairs.</p><b>- David (Manchester)</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="section-title">
+        <small>Contact Us</small>
+        <h2>Book Your Mobile Mechanic</h2>
+        <p>Send your details and we will open WhatsApp with your booking message ready.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h2>Rupa Auto Care</h2>
+          <p>Mobile mechanic service for Bolton, Manchester and nearby areas. We come to your home, workplace or roadside.</p>
+
+          <div class="contact-line"><span>📞</span><div><b>Phone</b><small>+44 7442 127757</small></div></div>
+          <div class="contact-line"><span>📍</span><div><b>Service Area</b><small>Bolton, Manchester & Nearby Areas</small></div></div>
+          <div class="contact-line"><span>⏰</span><div><b>Availability</b><small>Same-day support where possible</small></div></div>
+          <div class="contact-line"><span>🔧</span><div><b>Services</b><small>Oil change, brakes, battery, engine diagnostic, tyres, suspension, clutch, transmission, car wash, injector cleaning, radiator, starter/alternator, electrical and pre-purchase inspection</small></div></div>
+
+          <div class="map-box"><div><b>Mobile Service Area</b>We travel to customers in Bolton, Manchester and nearby locations.</div></div>
+        </div>
+
+        <div class="contact-form">
+          <form onsubmit="sendContact(event)">
+            <input id="cname" placeholder="Your Name" required />
+            <input id="cphone" placeholder="Phone Number" required />
+            <input id="cvehicle" placeholder="Vehicle Make & Model" />
+            <select id="cservice">
+              <option>General Service</option>
+              <option>Oil Change Service</option>
+              <option>Brake Service</option>
+              <option>Battery Service</option>
+              <option>Engine Diagnostic</option>
+              <option>Tyre Services</option>
+              <option>Suspension Service</option>
+              <option>Clutch Service</option>
+              <option>Transmission Service</option>
+              <option>Car Wash & Cleaning</option>
+              <option>Fuel Injector Cleaning</option>
+              <option>Radiator Service</option>
+              <option>Starter & Alternator Service</option>
+              <option>Electrical Services</option>
+              <option>Pre Purchase Inspection</option>
+              <option>Bulbs</option>
+              <option>Fan Belt</option>
+              <option>Wipers</option>
+              <option>Repairs</option>
+              <option>Buy & Sell Cars</option>
+              <option>Other</option>
+            </select>
+            <textarea id="cmsg" placeholder="Describe your issue / location"></textarea>
+            <button class="btn btn-yellow" type="submit">Send Booking on WhatsApp</button>
+            <a class="btn btn-dark" href="tel:+447442127757">Call Now</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="whatsapp" href="https://api.whatsapp.com/send?phone=447442127757&text=Hi%20Rupa%20Auto%20Care%2C%20I%20need%20mobile%20mechanic%20service.">💬 WhatsApp</a>
+  <div class="footer">© 2026 Rupa Auto Care</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
