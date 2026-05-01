@@ -18,7 +18,7 @@ function sendInquiry(){
   const service = document.getElementById("pservice").value;
   const msg = document.getElementById("pmsg").value || "Not provided";
 
-  const text = `Hi Rupa Auto Care,%0A%0AI want to book a mobile mechanic.%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0AIssue/Location: ${msg}%0A%0AArea: Bolton / Manchester`;
+  const text = `Hi Rupa Auto Care,%0A%0AI want to book a mobile mechanic.%0A%0AName: ${name}%0APhone: ${phone}%0ACar Make & Model: ${car}%0AService: ${service}%0AIssue/Location: ${msg}%0A%0AArea: Bolton / Manchester`;
   window.location.href = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${text}`;
   closePopup();
 }
